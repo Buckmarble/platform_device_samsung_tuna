@@ -25,7 +25,7 @@ import android.preference.PreferenceManager;
 
 public class GpuOverclock implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/system/cpu/cpu0/cpufreq/gpu_oc";
+    private static final String FILE = "/sys/devices/virtual/misc/liveoc/gpu_performance";
 
     public static boolean isSupported() {
         return Utils.fileExists(FILE);

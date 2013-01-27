@@ -58,7 +58,7 @@ public class ColorTuningPreference extends DialogPreference implements OnClickLi
     private ColorSeekBar mSeekBars[] = new ColorSeekBar[3];
 
     // Align MAX_VALUE with Voodoo Control settings
-    private static final int MAX_VALUE = 2000000000;
+    private static final int MAX_VALUE = 1100000000;
 
     // Track instances to know when to restore original color
     // (when the orientation changes, a new dialog is created before the old one

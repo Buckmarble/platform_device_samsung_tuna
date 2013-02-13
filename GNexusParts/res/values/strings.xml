@@ -53,6 +53,7 @@
     <string name="fsync_control_title">Fsync Control</string>
 
     <string name="sound_control_title">Volume Boost Level</string>
+    <string name="sound_control_summary">High Performance Audio Must Be Enabled</string>
 
     <string name="highperf_audio_title">High Performance Audio</string>
 

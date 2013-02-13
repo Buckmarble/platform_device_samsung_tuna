@@ -61,7 +61,8 @@
 
         <com.cyanogenmod.settings.device.SoundControl
             android:key="sound_control"
-            android:title="@string/sound_control_title"/>
+            android:title="@string/sound_control_title"
+            android:summary="@string/sound_control_summary" />
 
     </PreferenceCategory>
 

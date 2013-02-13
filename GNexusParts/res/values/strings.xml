@@ -48,4 +48,12 @@
     <string name="category_gpu_title">GPU</string>
     <string name="gpu_overclock_title">Clock Speed</string>
 
+    <string name="advanced_kernel_title">Advanced Kernel Settings</string>
+
+    <string name="fsync_control_title">Fsync Control</string>
+
+    <string name="sound_control_title">Volume Boost Level</string>
+
+    <string name="highperf_audio_title">High Performance Audio</string>
+
 </resources>

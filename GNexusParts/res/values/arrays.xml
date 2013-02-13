@@ -10,4 +10,25 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+
+    <string-array name="fsync_control_entries">
+        <item>enabled (default)</item>
+        <item>Disabled</item>
+    </string-array>
+
+    <string-array name="fsync_control_values" translatable="false">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="highperf_audio_entries">
+        <item>enabled</item>
+        <item>Disabled (default)</item>
+    </string-array>
+
+    <string-array name="highperf_audio_values" translatable="false">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
 </resources>

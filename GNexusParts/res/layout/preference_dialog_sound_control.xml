@@ -32,5 +32,30 @@
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
 
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/sound_seekbar" >
+
+            <Button
+                android:id="@+id/btnmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sound_min_title"
+                android:textSize="12dp"
+                android:width="100dp" />
+
+            <Button
+                android:id="@+id/btnmax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sound_max_title"
+                android:textSize="12dp"
+                android:width="100dp" />
+
+        </LinearLayout>
+
     </RelativeLayout>
 </ScrollView>

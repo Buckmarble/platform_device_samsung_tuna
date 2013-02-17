@@ -54,6 +54,8 @@
 
     <string name="sound_control_title">Volume Boost Level</string>
     <string name="sound_control_summary">High Performance Audio Must Be Enabled</string>
+    <string name="sound_min_title">Minimum</string>
+    <string name="sound_max_title">Maximum</string>
 
     <string name="highperf_audio_title">High Performance Audio</string>
 

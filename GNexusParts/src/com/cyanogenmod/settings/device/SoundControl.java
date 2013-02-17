@@ -34,7 +34,7 @@ import android.os.Vibrator;
  * Special preference type that allows configuration of sound control settings on Nexus
  * Devices
  */
-public class SoundControl extends DialogPreference {
+public class SoundControl extends DialogPreference  implements OnClickListener {
 
     private static final String TAG = "SOUND...";
 
@@ -76,8 +76,17 @@ public class SoundControl extends DialogPreference {
             if (i < 3)
                 mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], OFFSET_VALUE, MAX_VALUE);
             else
-                mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], 0, 10);
+                mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], 0, 2);
         }
+        SetupButtonClickListeners(view);
+    }
+
+    private void SetupButtonClickListeners(View view) {
+            Button mDefaultButton = (Button)view.findViewById(R.id.btnmin);
+            mDefaultButton.setOnClickListener(this);
+
+            Button mTestButton = (Button)view.findViewById(R.id.btnmax);
+            mTestButton.setOnClickListener(this);
     }
 
     @Override
@@ -170,7 +179,7 @@ public class SoundControl extends DialogPreference {
             // Read original value
             if (Utils.fileExists(mFilePath)) {
                 String sDefaultValue = Utils.readOneLine(mFilePath);
-                iValue = minValue(Integer.valueOf(sDefaultValue));
+                iValue = nextBoostValue(Integer.valueOf(sDefaultValue));
             } else {
                 iValue = iMax - iOffset;
             }
@@ -243,4 +252,22 @@ public class SoundControl extends DialogPreference {
 
     }
 
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.btnmin:
+                    setMinValue();
+                    break;
+            case R.id.btnmax:
+                    setMaxValue();
+                    break;
+        }
+    }
+
+    private void setMinValue() {
+        mSeekBars[0].setNewValue(0);
+    }
+
+    private void setMaxValue() {
+        mSeekBars[0].setNewValue(2);
+    }
 }

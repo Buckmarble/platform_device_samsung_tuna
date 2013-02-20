@@ -52,7 +52,7 @@ public class SoundControl extends DialogPreference  implements OnClickListener {
 
     private soundSeekBar mSeekBars[] = new soundSeekBar[1];
 
-    private static final int MAX_VALUE = 2;
+    private static final int MAX_VALUE = 3;
 
     private static final int OFFSET_VALUE = 0;
 
@@ -76,7 +76,7 @@ public class SoundControl extends DialogPreference  implements OnClickListener {
             if (i < 3)
                 mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], OFFSET_VALUE, MAX_VALUE);
             else
-                mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], 0, 2);
+                mSeekBars[i] = new soundSeekBar(seekBar, valueDisplay, FILE_PATH[i], 0, 3);
         }
         SetupButtonClickListeners(view);
     }
@@ -268,6 +268,6 @@ public class SoundControl extends DialogPreference  implements OnClickListener {
     }
 
     private void setMaxValue() {
-        mSeekBars[0].setNewValue(2);
+        mSeekBars[0].setNewValue(3);
     }
 }
